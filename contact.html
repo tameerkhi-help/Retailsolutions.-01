@@ -7,7 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="navbar"><div class="container nav-container"><a href="index.html" class="logo">Retail<span>solutions</span></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="solutions.html">Solutions</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="process.html">Process</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" class="active">Contact</a></li></ul><div class="hamburger">☰</div></div></header>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Retail<span>solutions</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </div>
+    </header>
 
     <section class="contact-page-wrapper-extended container scroll-anim">
         <div class="contact-info-extended">
@@ -33,13 +46,76 @@
                 <div class="input-group-extended"><label>Number of Stores</label><input type="number" id="stores" placeholder="e.g. 5" required></div>
                 <div class="input-group-extended"><label>Current POS / Surveillance System</label><input type="text" id="pos" placeholder="e.g. Clover" required></div>
                 <div class="input-group-extended"><label>How can we help? (Optional)</label><textarea id="message" rows="5" placeholder="Tell us about your operations..."></textarea></div>
-                <button type="submit" class="btn btn-primary btn-large full-width">Submit Lead Form</button>
+                <button type="submit" id="submitBtn" class="btn btn-primary btn-large full-width">Submit Lead Form</button>
                 <div id="formMessage" class="form-message"></div>
             </form>
         </div>
     </section>
 
     <footer><div class="container footer-content text-center"><p>&copy; 2026 Retailsolutions.</p></div></footer>
+
     <script src="script.js"></script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+
+        // Aapki Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCEWzNfo6zxBxRwGjs9m-A_j-Qp66ZdWm4",
+            authDomain: "retailsolutions-5cba4.firebaseapp.com",
+            projectId: "retailsolutions-5cba4",
+            storageBucket: "retailsolutions-5cba4.firebasestorage.app",
+            messagingSenderId: "446389657639",
+            appId: "1:446389657639:web:d94565e962e2b19cd8ae02",
+            measurementId: "G-R1NSK0GYWR"
+        };
+
+        // Firebase Initialize
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Form Submit Event
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+        const submitBtn = document.getElementById('submitBtn');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault(); 
+                
+                // Button Text Change
+                const originalText = submitBtn.innerText;
+                submitBtn.innerText = "Sending Data...";
+                submitBtn.disabled = true;
+
+                try {
+                    // Firestore Database mein data add karna
+                    await addDoc(collection(db, "leads"), {
+                        firstName: document.getElementById('firstName').value,
+                        lastName: document.getElementById('lastName').value,
+                        email: document.getElementById('email').value,
+                        phone: document.getElementById('phone').value,
+                        stores: document.getElementById('stores').value,
+                        posSystem: document.getElementById('pos').value,
+                        message: document.getElementById('message').value,
+                        timestamp: new Date()
+                    });
+
+                    // Success Message
+                    formMessage.innerHTML = "<div style='background: #dcfce7; color: #166534; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 25px; font-size: 18px; text-align: center; border: 1px solid #bbf7d0;'>Thanks " + document.getElementById('firstName').value + "! Your request is securely submitted.</div>";
+                    contactForm.reset();
+                } catch (error) {
+                    console.error("Firebase Error: ", error);
+                    formMessage.innerHTML = "<div style='background: #fee2e2; color: #991b1b; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 25px; font-size: 18px; text-align: center;'>Error sending data. Please check your Firebase settings.</div>";
+                } finally {
+                    // Button Restore
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false;
+                    setTimeout(() => { formMessage.innerHTML = ""; }, 6000);
+                }
+            });
+        }
+    </script>
 </body>
 </html>
