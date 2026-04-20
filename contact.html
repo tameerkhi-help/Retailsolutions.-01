@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Retailsolutions</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="navbar">
@@ -25,35 +24,32 @@
 
     <section class="contact-section container scroll-anim">
         <div class="contact-info">
-            <h1>Let's scale your operations.</h1>
-            <p>Schedule your free consultation and tech audit today.</p>
+            <h1 style="font-size: 48px; margin-bottom: 20px;">Let's scale your operations.</h1>
+            <p style="font-size: 20px; color: #475569; margin-bottom: 40px;">Get in touch with us to schedule your free consultation and tech audit.</p>
+            
             <div class="method">
-                <div>
-                    <strong>Email Us</strong>
-                    <p>contact@retailsolutions.com</p>
-                </div>
+                <strong>Direct Support</strong>
+                <p>+1 (800) 123-4567</p>
             </div>
             <div class="method">
-                <div>
-                    <strong>Call Us</strong>
-                    <p>+1 (800) 123-4567</p>
-                </div>
+                <strong>Email Us</strong>
+                <p>contact@retailsolutions.com</p>
             </div>
         </div>
         
         <div class="contact-form">
             <form id="contactForm">
                 <div class="input-group">
-                    <label>Your Name</label>
-                    <input type="text" id="name" required>
+                    <label>Your Full Name</label>
+                    <input type="text" id="name" placeholder="John Doe" required>
                 </div>
                 <div class="input-group">
                     <label>Email Address</label>
-                    <input type="email" id="email" required>
+                    <input type="email" id="email" placeholder="john@example.com" required>
                 </div>
                 <div class="input-group">
                     <label>Number of Stores</label>
-                    <input type="number" id="stores" required>
+                    <input type="number" id="stores" placeholder="e.g. 5" required>
                 </div>
                 <button type="submit" class="btn btn-primary full-width">Send Message</button>
             </form>
@@ -62,10 +58,7 @@
     </section>
 
     <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">Retail<span>solutions</span></div>
-            <p>&copy; 2026 Retailsolutions. All rights reserved.</p>
-        </div>
+        <div class="footer-bottom container"><p>&copy; 2026 Retailsolutions.</p></div>
     </footer>
     <script src="script.js"></script>
 </body>
