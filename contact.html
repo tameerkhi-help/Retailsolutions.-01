@@ -58,12 +58,13 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
+        import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
 
-        // Aapki Firebase Configuration
+        // Aapki Firebase Configuration (Realtime DB URL ke sath)
         const firebaseConfig = {
             apiKey: "AIzaSyCEWzNfo6zxBxRwGjs9m-A_j-Qp66ZdWm4",
             authDomain: "retailsolutions-5cba4.firebaseapp.com",
+            databaseURL: "https://retailsolutions-5cba4-default-rtdb.firebaseio.com", // Yeh URL Realtime DB ke liye zaroori hai
             projectId: "retailsolutions-5cba4",
             storageBucket: "retailsolutions-5cba4.firebasestorage.app",
             messagingSenderId: "446389657639",
@@ -73,9 +74,9 @@
 
         // Firebase Initialize
         const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
+        const db = getDatabase(app);
 
-        // Form Submit Event
+        // Form Logic
         const contactForm = document.getElementById('contactForm');
         const formMessage = document.getElementById('formMessage');
         const submitBtn = document.getElementById('submitBtn');
@@ -84,14 +85,14 @@
             contactForm.addEventListener('submit', async (e) => {
                 e.preventDefault(); 
                 
-                // Button Text Change
                 const originalText = submitBtn.innerText;
                 submitBtn.innerText = "Sending Data...";
                 submitBtn.disabled = true;
 
                 try {
-                    // Firestore Database mein data add karna
-                    await addDoc(collection(db, "leads"), {
+                    // Realtime Database mein "messages" folder banayega
+                    const newLeadRef = push(ref(db, 'messages'));
+                    await set(newLeadRef, {
                         firstName: document.getElementById('firstName').value,
                         lastName: document.getElementById('lastName').value,
                         email: document.getElementById('email').value,
@@ -99,7 +100,7 @@
                         stores: document.getElementById('stores').value,
                         posSystem: document.getElementById('pos').value,
                         message: document.getElementById('message').value,
-                        timestamp: new Date()
+                        timestamp: new Date().toLocaleString()
                     });
 
                     // Success Message
@@ -109,7 +110,6 @@
                     console.error("Firebase Error: ", error);
                     formMessage.innerHTML = "<div style='background: #fee2e2; color: #991b1b; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 25px; font-size: 18px; text-align: center;'>Error sending data. Please check your Firebase settings.</div>";
                 } finally {
-                    // Button Restore
                     submitBtn.innerText = originalText;
                     submitBtn.disabled = false;
                     setTimeout(() => { formMessage.innerHTML = ""; }, 6000);
