@@ -3,68 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | vibevault</title>
+    <meta name="robots" content="index, follow">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Contact Us | Schedule a Free Technical Audit | vibevault</title>
+    <meta name="description" content="Get in touch with vibevault for dedicated remote retail back-office management. Schedule your free technical audit and operational consultation today.">
+    <link rel="canonical" href="https://vibevault.com/contact.html">
+
+    <!-- Open Graph / Facebook / LinkedIn Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vibevault.com/contact.html">
+    <meta property="og:title" content="Contact Us | vibevault Retail Operations">
+    <meta property="og:description" content="Schedule a free technical audit and operational consultation with vibevault. We respond within 24 hours.">
+    <meta property="og:image" content="https://vibevault.com/og-contact-image.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://vibevault.com/contact.html">
+    <meta name="twitter:title" content="Contact Us | vibevault Retail Operations">
+    <meta name="twitter:description" content="Schedule a free technical audit and operational consultation with vibevault. We respond within 24 hours.">
+    <meta name="twitter:image" content="https://vibevault.com/og-contact-image.jpg">
+
+    <!-- CSS & Fonts Preconnect -->
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Structured Data (Schema.org JSON-LD for ContactPage) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact vibevault",
+      "description": "Schedule a free technical audit and operational consultation with vibevault.",
+      "url": "https://vibevault.com/contact.html",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "vibevault",
+        "url": "https://vibevault.com",
+        "email": "contact@vibevault.com",
+        "telephone": "+1-800-123-4567"
+      }
+    }
+    </script>
 </head>
 <body>
+
     <header class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo"><span>vibevault</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="solutions.html">Solutions</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="process.html">Process</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-            <div class="hamburger">☰</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="process.html">Process</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Schedule Free Call</a>
+            <div class="hamburger" aria-label="Toggle Navigation Menu" role="button" tabindex="0">☰</div>
         </div>
     </header>
 
-    <section class="contact-page-wrapper-extended container scroll-anim">
-        <div class="contact-info-extended">
-            <div class="label-badge">GET IN TOUCH</div>
-            <h1 class="hero-title">Let's scale your operations.</h1>
-            <p class="hero-desc">Contact us to schedule your free technical audit and consultation. We will get back to you within 24 hours.</p>
+    <main id="main-content">
+        <section class="contact-page-wrapper-extended container scroll-anim" style="padding-top: 60px; padding-bottom: 80px;">
+            <div class="contact-info-extended">
+                <div class="label-badge">GET IN TOUCH</div>
+                <h1 class="hero-title">Let's scale your operations.</h1>
+                <p class="hero-desc">Contact us to schedule your free technical audit and consultation. We will get back to you within 24 hours.</p>
+                
+                <div class="contact-cards-grid mt-50">
+                    <div class="contact-card-info">
+                        <h3>Direct Support</h3>
+                        <p><a href="tel:+18001234567" style="color: inherit; text-decoration: none;">+1 (800) 123-4567</a></p>
+                    </div>
+                    <div class="contact-card-info">
+                        <h3>Email Us</h3>
+                        <p><a href="mailto:contact@vibevault.com" style="color: inherit; text-decoration: none;">contact@vibevault.com</a></p>
+                    </div>
+                    <div class="contact-card-info">
+                        <h3>Audit Inquiry</h3>
+                        <p><a href="mailto:audits@vibevault.com" style="color: inherit; text-decoration: none;">audits@vibevault.com</a></p>
+                    </div>
+                </div>
+            </div>
             
-            <div class="contact-cards-grid mt-50">
-                <div class="contact-card-info"><h3>Direct Support</h3><p>+1 (800) 123-4567</p></div>
-                <div class="contact-card-info"><h3>Email Us</h3><p>contact@retailsolutions.com</p></div>
-                <div class="contact-card-info"><h3>Audit Inquiry</h3><p>audits@retailsolutions.com</p></div>
+            <div class="contact-form-large-extended">
+                <form id="contactForm">
+                    <div class="form-row-extended">
+                        <div class="input-group-extended">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" placeholder="John" required>
+                        </div>
+                        <div class="input-group-extended">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" placeholder="Doe" required>
+                        </div>
+                    </div>
+                    <div class="input-group-extended">
+                        <label for="email">Work Email Address</label>
+                        <input type="email" id="email" placeholder="john@company.com" required>
+                    </div>
+                    <div class="input-group-extended">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="+1 (555) 000-0000" required>
+                    </div>
+                    <div class="input-group-extended">
+                        <label for="stores">Number of Stores</label>
+                        <input type="number" id="stores" placeholder="e.g. 5" required>
+                    </div>
+                    <div class="input-group-extended">
+                        <label for="pos">Current POS / Surveillance System</label>
+                        <input type="text" id="pos" placeholder="e.g. Clover" required>
+                    </div>
+                    <div class="input-group-extended">
+                        <label for="message">How can we help? (Optional)</label>
+                        <textarea id="message" rows="5" placeholder="Tell us about your operations..."></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn" class="btn btn-primary btn-large full-width">Submit Lead Form</button>
+                    <div id="formMessage" class="form-message" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo" style="color:white;">vibe<span style="color:#3b82f6;">vault</span></div>
+                <p>The Ultimate Remote Operational Stack.</p>
+            </div>
+            <div class="footer-links">
+                <a href="solutions.html">Solutions</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
             </div>
         </div>
-        
-        <div class="contact-form-large-extended">
-            <form id="contactForm">
-                <div class="form-row-extended">
-                    <div class="input-group-extended"><label>First Name</label><input type="text" id="firstName" placeholder="John" required></div>
-                    <div class="input-group-extended"><label>Last Name</label><input type="text" id="lastName" placeholder="Doe" required></div>
-                </div>
-                <div class="input-group-extended"><label>Work Email Address</label><input type="email" id="email" placeholder="john@company.com" required></div>
-                <div class="input-group-extended"><label>Phone Number</label><input type="tel" id="phone" placeholder="+1 (555) 000-0000" required></div>
-                <div class="input-group-extended"><label>Number of Stores</label><input type="number" id="stores" placeholder="e.g. 5" required></div>
-                <div class="input-group-extended"><label>Current POS / Surveillance System</label><input type="text" id="pos" placeholder="e.g. Clover" required></div>
-                <div class="input-group-extended"><label>How can we help? (Optional)</label><textarea id="message" rows="5" placeholder="Tell us about your operations..."></textarea></div>
-                <button type="submit" id="submitBtn" class="btn btn-primary btn-large full-width">Submit Lead Form</button>
-                <div id="formMessage" class="form-message"></div>
-            </form>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 vibevault. All rights reserved.</p>
         </div>
-    </section>
-
-    <footer><div class="container footer-content text-center"><p>&copy; 2026 Retailsolutions.</p></div></footer>
+    </footer>
 
     <script src="script.js"></script>
 
+    <!-- Firebase Realtime Database Integration Script -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
         import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
 
-        // Aapki Firebase Configuration (Realtime DB URL ke sath)
+        // Firebase Configuration
         const firebaseConfig = {
             apiKey: "AIzaSyCEWzNfo6zxBxRwGjs9m-A_j-Qp66ZdWm4",
             authDomain: "retailsolutions-5cba4.firebaseapp.com",
-            databaseURL: "https://retailsolutions-5cba4-default-rtdb.firebaseio.com", // Yeh URL Realtime DB ke liye zaroori hai
+            databaseURL: "https://retailsolutions-5cba4-default-rtdb.firebaseio.com",
             projectId: "retailsolutions-5cba4",
             storageBucket: "retailsolutions-5cba4.firebasestorage.app",
             messagingSenderId: "446389657639",
@@ -72,11 +166,11 @@
             measurementId: "G-R1NSK0GYWR"
         };
 
-        // Firebase Initialize
+        // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
 
-        // Form Logic
+        // Form Submission Logic
         const contactForm = document.getElementById('contactForm');
         const formMessage = document.getElementById('formMessage');
         const submitBtn = document.getElementById('submitBtn');
@@ -90,7 +184,6 @@
                 submitBtn.disabled = true;
 
                 try {
-                    // Realtime Database mein "messages" folder banayega
                     const newLeadRef = push(ref(db, 'messages'));
                     await set(newLeadRef, {
                         firstName: document.getElementById('firstName').value,
@@ -103,12 +196,12 @@
                         timestamp: new Date().toLocaleString()
                     });
 
-                    // Success Message
+                    // Success Feedback
                     formMessage.innerHTML = "<div style='background: #dcfce7; color: #166534; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 25px; font-size: 18px; text-align: center; border: 1px solid #bbf7d0;'>Thanks " + document.getElementById('firstName').value + "! Your request is securely submitted.</div>";
                     contactForm.reset();
                 } catch (error) {
                     console.error("Firebase Error: ", error);
-                    formMessage.innerHTML = "<div style='background: #fee2e2; color: #991b1b; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 25px; font-size: 18px; text-align: center;'>Error sending data. Please check your Firebase settings.</div>";
+                    formMessage.innerHTML = "<div style='background: #fee2e2; color: #991b1b; padding: 20px; border-radius: 12px; font-weight: bold; margin-top: 25px; font-size: 18px; text-align: center;'>Error sending data. Please check your connection or Firebase settings.</div>";
                 } finally {
                     submitBtn.innerText = originalText;
                     submitBtn.disabled = false;
