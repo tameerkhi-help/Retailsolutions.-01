@@ -142,7 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
             interval = setInterval(nextSlide, 5000);
         }
 
-        // Event listeners
         if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); resetAutoScroll(); });
         if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); resetAutoScroll(); });
 
@@ -151,16 +150,13 @@ document.addEventListener('DOMContentLoaded', () => {
             resetAutoScroll();
         });
 
-        // Init
         updateCarousel();
         if (autoScroll) startAutoScroll();
 
-        // pause on hover
         wrapper.addEventListener('mouseenter', () => { if (interval) clearInterval(interval); });
         wrapper.addEventListener('mouseleave', () => { if (autoScroll) startAutoScroll(); });
     }
 
-    // Init both carousels
     initCarousel('featuresCarousel', '.carousel-slide', true);
     initCarousel('testimonialsCarousel', '.testimonial-slide', true);
 
@@ -169,7 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', function() {
             const parent = this.parentElement;
             const isActive = parent.classList.contains('active');
-            // Close others
             document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
             if (!isActive) parent.classList.add('active');
         });
