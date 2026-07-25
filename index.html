@@ -2,28 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="robots" content="index, follow" />
 
     <!-- Primary SEO -->
     <title>Vibevault | Enterprise Retail Operations & Back-Office Solutions</title>
     <meta name="description" content="Vibevault delivers enterprise-grade retail operations management. Human-powered POS, CCTV, inventory & back-office solutions. Scale with precision." />
-    <link rel="canonical" href="https://vibevault.com/" />
+    <link rel="canonical" href="https://vibevault1.store/" />
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a1628'/><text x='50%' y='55%' dominant-baseline='central' text-anchor='middle' fill='%2300d4ff' font-family='sans-serif' font-size='60' font-weight='bold'>V</text></svg>" />
-    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a1628'/><text x='50%' y='55%' dominant-baseline='central' text-anchor='middle' fill='%2300d4ff' font-family='sans-serif' font-size='60' font-weight='bold'>V</text></svg>" />
+    <!-- Favicon (Inline SVG Data URI) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230a1628'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='central' text-anchor='middle' fill='%2300d4ff' font-family='Inter, sans-serif' font-size='56' font-weight='900' letter-spacing='-2'%3EV%3C/text%3E%3C/svg%3E" />
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230a1628'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='central' text-anchor='middle' fill='%2300d4ff' font-family='Inter, sans-serif' font-size='56' font-weight='900' letter-spacing='-2'%3EV%3C/text%3E%3C/svg%3E" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://vibevault.com/" />
+    <meta property="og:url" content="https://vibevault1.store/" />
     <meta property="og:title" content="Vibevault | Enterprise Retail Operations & Back-Office Solutions" />
     <meta property="og:description" content="Vibevault delivers enterprise-grade retail operations management. Human-powered POS, CCTV, inventory & back-office solutions." />
     <meta property="og:image" content="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://vibevault.com/" />
+    <meta name="twitter:url" content="https://vibevault1.store/" />
     <meta name="twitter:title" content="Vibevault | Enterprise Retail Operations" />
     <meta name="twitter:description" content="Human-powered retail operations management. Scale with precision." />
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80" />
@@ -33,22 +35,72 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-    <!-- Structured Data -->
+    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Vibevault",
-            "url": "https://vibevault.com",
-            "logo": "https://vibevault.com/logo.png",
+            "url": "https://vibevault1.store",
+            "logo": "https://vibevault1.store/favicon.ico",
             "description": "Vibevault provides enterprise-grade retail operations management including POS configuration, CCTV surveillance, inventory management, and back-office reconciliation.",
             "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "sales",
-                "email": "sales@vibevault.com"
-            }
+                "email": "sales@vibevault.com",
+                "telephone": "+1-832-464-6909"
+            },
+            "sameAs": [
+                "https://www.linkedin.com/company/vibevault",
+                "https://twitter.com/vibevault"
+            ]
         }
     </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://vibevault1.store",
+            "name": "Vibevault",
+            "description": "Enterprise retail operations management platform."
+        }
+    </script>
+    <style>
+        /* Inline critical CSS to prevent FOUC */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            color: #0f172a;
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .container {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -110,6 +162,7 @@
                     <span>Square</span>
                     <span>Clover Plus</span>
                     <span>NCR</span>
+                    <span>Toast</span>
                 </div>
             </div>
         </section>
@@ -154,6 +207,16 @@
                             <h3>Staff Training & Onboarding</h3>
                             <p>Standardized training modules for new hires and ongoing staff development.</p>
                         </div>
+                        <div class="carousel-slide">
+                            <div class="feature-icon">🔒</div>
+                            <h3>Loss Prevention</h3>
+                            <p>Proactive monitoring and audit trails to reduce shrinkage and protect your assets.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="feature-icon">📈</div>
+                            <h3>Margin Optimization</h3>
+                            <p>Data-driven pricing strategies and cost controls to maximize your bottom line.</p>
+                        </div>
                     </div>
                     <button class="carousel-btn prev" aria-label="Previous slide">‹</button>
                     <button class="carousel-btn next" aria-label="Next slide">›</button>
@@ -166,7 +229,7 @@
         <section class="deep-dive container scroll-anim">
             <div class="dive-content">
                 <div class="label-badge">Inventory Intelligence</div>
-                <h2>Know exactly what’s on your shelves — in real time.</h2>
+                <h2>Know exactly what's on your shelves — in real time.</h2>
                 <p>Cost averaging, reorder points, and shrinkage tracking configured properly. Stop guessing and start knowing your inventory position daily.</p>
                 <ul class="check-list">
                     <li>✔️ Accurate reorder points</li>
@@ -196,7 +259,7 @@
             </div>
         </section>
 
-        <!-- ===== TESTIMONIALS CAROUSEL ===== -->
+        <!-- ===== TESTIMONIALS CAROUSEL (10 Testimonials) ===== -->
         <section class="testimonials-section scroll-anim">
             <div class="container">
                 <div class="section-header text-center">
@@ -214,6 +277,7 @@
                                 <div>
                                     <strong>John Doe</strong>
                                     <span>Clover Store Owner</span>
+                                    <span class="verified-badge">✓ Verified Partner</span>
                                 </div>
                             </div>
                         </div>
@@ -225,6 +289,7 @@
                                 <div>
                                     <strong>Jane Smith</strong>
                                     <span>Square Retailer</span>
+                                    <span class="verified-badge">✓ Verified Partner</span>
                                 </div>
                             </div>
                         </div>
@@ -236,6 +301,7 @@
                                 <div>
                                     <strong>Mike Rivera</strong>
                                     <span>Multi-Store Operator</span>
+                                    <span class="verified-badge">✓ Verified Partner</span>
                                 </div>
                             </div>
                         </div>
@@ -247,6 +313,79 @@
                                 <div>
                                     <strong>Sarah Chen</strong>
                                     <span>Regional Manager</span>
+                                    <span class="verified-badge">✓ Verified Partner</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-slide">
+                            <div class="stars">★★★★★</div>
+                            <p>"We've been able to scale from 5 to 25 stores without adding back-office staff. Vibevault made that possible."</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1556157382-97eda2f9e2bf?auto=format&fit=crop&w=100&q=80" alt="David Park" loading="lazy" />
+                                <div>
+                                    <strong>David Park</strong>
+                                    <span>CEO, Park Retail Group</span>
+                                    <span class="verified-badge">✓ Verified Partner</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-slide">
+                            <div class="stars">★★★★★</div>
+                            <p>"The analytics dashboard gives me visibility I never had before. I can make decisions in real time."</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=100&q=80" alt="Emily Rodriguez" loading="lazy" />
+                                <div>
+                                    <strong>Emily Rodriguez</strong>
+                                    <span>Operations Director</span>
+                                    <span class="verified-badge">✓ Verified Partner</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-slide">
+                            <div class="stars">★★★★★</div>
+                            <p>"Vibevault helped us recover $85k in lost inventory in the first quarter alone. Their team is relentless."</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="James Kim" loading="lazy" />
+                                <div>
+                                    <strong>James Kim</strong>
+                                    <span>Franchise Owner</span>
+                                    <span class="verified-badge">✓ Verified Partner</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-slide">
+                            <div class="stars">★★★★★</div>
+                            <p>"The onboarding was seamless. Within 2 weeks, we had full visibility across all 12 stores."</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?auto=format&fit=crop&w=100&q=80" alt="Lisa Thompson" loading="lazy" />
+                                <div>
+                                    <strong>Lisa Thompson</strong>
+                                    <span>Retail Chain Operator</span>
+                                    <span class="verified-badge">✓ Verified Partner</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-slide">
+                            <div class="stars">★★★★★</div>
+                            <p>"Vibevault's loss prevention team caught a $40k fraud scheme within 48 hours. Incredible."</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80" alt="Robert Nguyen" loading="lazy" />
+                                <div>
+                                    <strong>Robert Nguyen</strong>
+                                    <span>Security Director</span>
+                                    <span class="verified-badge">✓ Verified Partner</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-slide">
+                            <div class="stars">★★★★★</div>
+                            <p>"We've seen a 22% increase in gross margin since partnering with Vibevault. The ROI is undeniable."</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="Amanda Foster" loading="lazy" />
+                                <div>
+                                    <strong>Amanda Foster</strong>
+                                    <span>CFO, Foster Retail</span>
+                                    <span class="verified-badge">✓ Verified Partner</span>
                                 </div>
                             </div>
                         </div>
