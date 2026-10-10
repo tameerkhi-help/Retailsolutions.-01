@@ -768,6 +768,13 @@ footer {
     .grid-3 { grid-template-columns: 1fr; }
 
     .carousel-btn { display: none; }
+    
+    /* Footer Mobile Fix */
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
 }
 
 .scroll-anim {
